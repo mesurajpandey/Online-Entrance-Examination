@@ -1,0 +1,9 @@
+.horizontalBar{
+    height: 1px;
+    background-color: #adadad;
+    /*border: 1px;*/
+}
+.verticalBar{
+    width: 10px;
+    background-color: #adadad;
+}
