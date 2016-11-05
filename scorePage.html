@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Bootstrap 3, from LayoutIt!</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">
+        <link rel="shortcut icon" href="img/favicon.png">
+
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/scripts.js"></script>
+        <script>
+            var correct = 0;
+            var incorrect = 0;
+            var totalQ = 65;
+            var totalA = 0;
+            var score = 0;
+            $(document).ready(function() {
+                var url = window.location;
+                var start = url.search.indexOf("=") + 1;
+                var end = url.search.lastIndexOf("&");
+                correct = parseInt(url.search.substring(start, end));
+                start = url.search.lastIndexOf("=");
+                incorrect = parseInt(url.search.substring(start + 1, url.search.length));
+                totalA = correct + incorrect;
+                score = correct - (incorrect * 0.25);
+                document.getElementById("totalA").innerHTML = totalA;
+                document.getElementById("correct").innerHTML = correct;
+                document.getElementById("incorrect").innerHTML = incorrect;
+                document.getElementById("score").innerHTML = score;
+            });
+            function goHome() {
+                window.location = "index.html";
+            }
+        </script>
+    </head>
+
+    <body id="bodyElement" style="background-color: #cccccc;width: 100%;">
+        <div style="background-color: #dddddd;margin-bottom: 5px;width: 101%;" class="row clearfix">
+            <div class="col-md-12 column">
+                <h6 class="text-center text-primary">
+                    Entrance Examination Application 29.0.8
+                </h6>
+            </div>
+        </div>
+        <div style="border: 5px;border-color: #999;background-color: #ffffff;width: 60%;height: 50%" class="container">
+            <div>
+                <div class="row clearfix">
+                    <div class="col-md-1 column">
+                        <img alt="140x140" src="res/companyLogo.png">
+                    </div>
+                    <div class="col-md-11 column">
+                        <!--<span class="label label-primary">Label</span> <span class="label label-primary">Label</span> <span class="label label-primary">Label</span>-->
+                        <h6 class="text-left text-primary">
+                            Tribhuvan University
+                        </h6>
+                        <!--<br>-->
+                        <h6 class="text-left text-primary">
+                            Institute of Engineering
+                        </h6>
+                        <!--<br>-->
+                        <h6 class="text-left text-primary">
+                            Online Entrance Examination
+                        </h6>
+                    </div>
+                </div>
+                <div style="background-color: #0066cc;margin-bottom: 10px;" class="row clearfix">
+                    <div class="col-md-8 column">
+                        <h4 class="text-left" style="color: #ffffff">
+                            B.E/B.Arch. Online Entrance Examination
+                        </h4>
+                    </div>
+                </div>
+
+                <div class="row clearfix">
+                    <div class="col-md-12 column">
+                        <table class="table table-striped">
+                            <tbody>
+                                <tr class="">
+                                    <td style = "height: 60px;">
+                                        Total Questions
+                                    </td>
+                                    <td>
+                                        65
+                                    </td>
+                                </tr>
+                                <tr class="">
+                                    <td style = "height: 60px;">
+                                        Total Attempted Questions
+                                    </td>
+                                    <td id="totalA">
+                                        45
+                                    </td>
+                                </tr>
+                                <tr class="">
+                                    <td style = "height: 60px;">
+                                        Total Correct Questions
+                                    </td>
+                                    <td id="correct">
+                                        25
+                                    </td>
+                                </tr>
+                                <tr class="">
+                                    <td style = "height: 60px;">
+                                        Total Incorrect Questions
+                                    </td>
+                                    <td id="incorrect">
+                                        20
+                                    </td>
+                                </tr>
+                                <tr class="active">
+                                    <td style = "height: 60px;">
+                                        Score
+                                    </td>
+                                    <td id = "score">
+                                        10
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="btn btn-primary" id="goHome" onclick="goHome()" style="height: 30px;float: right;margin-right: 20px;margin-bottom: 20px;">
+                        Go Home
+                    </div>
+                </div>
+
+
+
+                <div style="background-color: #0066cc;" class="row clearfix">
+                    <div class="col-md-12 column">
+                        <!--<span class="label label-default">Label</span> <span class="label label-default">Label</span> <span class="label label-default">Label</span> <span class="label label-default">Label</span>-->
+                        <h6 class="text-center" style="color: #ffffff" >
+                            Powered By:
+                        </h6>
+                        <h6 class="text-center" style="color: #ffffff" >
+                            NexGen, Next Generation Solutions
+                        </h6>
+                        <h6 class="text-center" style="color: #ffffff" >
+                            Phone No: 9813254445,9849682320,9803047080,9845390340
+                        </h6>
+                        <h6 class="text-center" style="color: #ffffff" >
+                            Email: dpn_rau@hotmail.com,rupeeshnidhi@gmail.com
+                        </h6>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
